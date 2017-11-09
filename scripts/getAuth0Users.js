@@ -9,10 +9,9 @@ var getUsers = function (config, allUsers, perPage, pageNumber) {
 
   var TENANT_DOMAIN = config.TENANT_DOMAIN;
   var USER_SEARCH_MGMT_TOKEN = config.USER_SEARCH_MGMT_TOKEN;
-  var AUTH0_CONNECTION_NAME = config.AUTH0_CONNECTION_NAME;
 
   var deferred = Q.defer();
-  var searchCriteria = { q: 'identities.connection:"' + AUTH0_CONNECTION_NAME + '"', search_engine: 'v2', per_page: perPage, page: pageNumber, fields: 'email', include_fields: 'true' };
+  var searchCriteria = { search_engine: 'v2', per_page: perPage, page: pageNumber, fields: 'email,name,given_name,family_name', include_fields: 'true' };
 
   var options = {
     method: 'GET',
