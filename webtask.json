@@ -33,10 +33,6 @@
     "MAILCHIMP_LIST_NAME": {
       "description": "This is the name of the MailChimp List you wish to export Auth0 User Profiles to. eg. Auth0-DBConn1",
       "required": true
-    },
-    "AUTH0_CONNECTION_NAME": {
-      "description": "This is the Auth0 Connection name associated with the user profiles you wish to export",
-      "required": true
     }
   }
 }
